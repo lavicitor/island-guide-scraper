@@ -202,6 +202,14 @@ The scraper is built for Croatian islands but the architecture is region-agnosti
 
 ---
 
+## Automated updates
+
+A GitHub Actions workflow runs every Monday at 6am UTC. It re-scrapes all islands in `island-guide-data/islands.txt`, rebuilds the HTML pages, and pushes the results to the data repository. The live site updates automatically within minutes.
+
+To trigger a manual refresh: Actions tab → "Weekly data refresh" → Run workflow.
+
+---
+
 ## License
 
 MIT
