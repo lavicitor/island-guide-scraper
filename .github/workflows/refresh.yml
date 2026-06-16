@@ -53,6 +53,6 @@ jobs:
           cd island-guide-data
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/ islands/ index.html index_cache/
+          git add data/ islands/ index.html
           git diff --staged --quiet || git commit -m "chore: weekly data refresh $(date -u +%Y-%m-%d)"
           git push
