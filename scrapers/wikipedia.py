@@ -85,15 +85,23 @@ def _fetch_and_parse(island_name: str, client: HttpClient) -> dict | None:
 
 def _fetch_summary(island_name: str, client: HttpClient) -> dict | None:
     encoded = island_name.replace(" ", "_")
-    try:
-        data = client.get(_WIKI_SUMMARY.format(encoded))
-        if data.get("type") == "disambiguation":
-            # Try with "_island" appended
-            data = client.get(_WIKI_SUMMARY.format(encoded + "_island"))
-        return data
-    except Exception as exc:
-        logger.info("English Wikipedia failed for '%s': %s — trying Croatian", island_name, exc)
+    candidates = [
+        encoded,
+        f"{encoded}_(island)",
+        f"{encoded}_island",
+    ]
+    for slug in candidates:
+        try:
+            data = client.get(_WIKI_SUMMARY.format(slug))
+            if data.get("type") == "disambiguation":
+                logger.debug("Wikipedia: '%s' is a disambiguation page, trying next", slug)
+                continue
+            if data.get("extract"):
+                return data
+        except Exception as exc:
+            logger.debug("English Wikipedia failed for '%s': %s", slug, exc)
 
+    logger.info("English Wikipedia exhausted candidates for '%s' — trying Croatian", island_name)
     try:
         return client.get(_WIKI_SUMMARY_HR.format(encoded))
     except Exception as exc:

@@ -56,6 +56,17 @@ from core.models import (
 from scrapers import jadrolinija, overpass, weather, wikipedia
 
 
+_CAR_FREE_ISLANDS = {
+    "silba", "susak", "ilovik", "premuda", "ist", "olib",
+    "molat", "skarda", "rivanj", "sestrunj", "zverinac",
+    "unije", "srakane",
+}
+
+
+def is_car_free(slug: str) -> bool:
+    return slug.lower() in _CAR_FREE_ISLANDS
+
+
 def slugify(name: str) -> str:
     name = name.lower().strip()
     name = re.sub(r"[čć]", "c", name)
@@ -138,7 +149,7 @@ def assemble_guide(
         coordinates=coords,
         area_km2=wiki.get("area_km2"),
         population=wiki.get("population"),
-        car_free=osm.get("car_free"),
+        car_free=is_car_free(slug),
         description=wiki.get("extract") or wiki.get("description"),
         best_for=[],
     )
