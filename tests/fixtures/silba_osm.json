@@ -1,0 +1,135 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API",
+  "elements": [
+    {
+      "type": "node",
+      "id": 1001,
+      "lat": 44.3720,
+      "lon": 14.6900,
+      "tags": {
+        "natural": "beach",
+        "name": "Žalić",
+        "surface": "sand"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1002,
+      "lat": 44.3750,
+      "lon": 14.6930,
+      "tags": {
+        "natural": "beach",
+        "name": "Sotovento"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1003,
+      "lat": 44.3710,
+      "lon": 14.6880,
+      "tags": {
+        "natural": "beach"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2001,
+      "lat": 44.3730,
+      "lon": 14.6910,
+      "tags": {
+        "amenity": "restaurant",
+        "name": "Konoba Marta",
+        "cuisine": "seafood"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2002,
+      "lat": 44.3732,
+      "lon": 14.6912,
+      "tags": {
+        "amenity": "cafe",
+        "name": "Caffe Bar Šilo"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3001,
+      "lat": 44.3725,
+      "lon": 14.6905,
+      "tags": {
+        "amenity": "atm",
+        "name": "Silba ATM",
+        "operator": "Silba Banka"
+      }
+    },
+    {
+      "type": "node",
+      "id": 4001,
+      "lat": 44.3728,
+      "lon": 14.6908,
+      "tags": {
+        "amenity": "pharmacy",
+        "name": "Ljekarna Silba"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5001,
+      "lat": 44.3740,
+      "lon": 14.6920,
+      "tags": {
+        "tourism": "guest_house",
+        "name": "Villa Silba"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5002,
+      "lat": 44.3742,
+      "lon": 14.6915,
+      "tags": {
+        "tourism": "apartment",
+        "name": "Apartmani Marica"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6001,
+      "lat": 44.3735,
+      "lon": 14.6922,
+      "tags": {
+        "historic": "tower",
+        "name": "Stara kula"
+      }
+    },
+    {
+      "type": "node",
+      "id": 7001,
+      "lat": 44.3722,
+      "lon": 14.6895,
+      "tags": {
+        "amenity": "ferry_terminal",
+        "name": "Silba trajektna luka"
+      }
+    },
+    {
+      "type": "way",
+      "id": 8001,
+      "nodes": [9001, 9002, 9003],
+      "tags": {
+        "highway": "footway",
+        "name": "Šetnica"
+      }
+    },
+    {
+      "type": "way",
+      "id": 8002,
+      "nodes": [9004, 9005],
+      "tags": {
+        "highway": "path"
+      }
+    }
+  ]
+}

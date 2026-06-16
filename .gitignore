@@ -1,0 +1,15 @@
+.cache/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Generated output is gitignored by default
+# Exception: data/silba.json and guides/silba.md are committed
+# as worked examples for portfolio purposes
+data/*
+!data/silba.json
+guides/*
+!guides/silba.md
+
+# Environment
+.env
