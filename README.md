@@ -2,7 +2,7 @@
 
 A multi-source Python data pipeline that aggregates public information about Croatian islands and generates structured tourist guides. Point it at any Croatian island and it produces a clean JSON dataset and a formatted Markdown guide in seconds.
 
-**Live demo:** [lavicitor.github.io/island-guide-data](https://lavicitor.github.io/island-guide-data) *(update once deployed)*
+**Live demo:** [lavicitor.github.io/island-guide-data](https://lavicitor.github.io/island-guide-data)
 
 ---
 
